@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    padding: 20px 100px;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+img{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+
+}
+p{
+    font-size: 20px;
+    text-align: justify;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    display:inline-block;                          /*to show buttons in inline-block */
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#white{
+    background-color: white;
+}
+#pink{
+    background-color:deeppink;
+}
+#violet{
+    background-color: blueviolet;
+}
+#black{
+    background-color: black;
+}
+#color-switcher{
+    text-align: right;                      /*to shift buttons to right*/
+}
