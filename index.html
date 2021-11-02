@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0px auto;
+
+        }
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display:inline-block;                          /*to show buttons in inline-block */
+            border: 1px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #pink{
+            background-color:deeppink;
+        }
+        #violet{
+            background-color: blueviolet;
+        }
+        #black{
+            background-color: black;
+        }
+        #color-switcher{
+            text-align: right;                      /*to shift buttons to right*/
+        }
+    </style>
+</head>
+<body>
+    <!--to change background color  --><!--onclick event=changeBG(colorcode) -->
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>  
+        <span class="btn" id="pink" onclick="changeBG('#FF1493')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#8A2BE2')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+
+    </div>
+
+    <h1 class="text">About Us</h1>                    <!--here class is for chaging the color-->
+    <img src="https://media.istockphoto.com/photos/group-of-business-people-holding-placards-forming-about-us-picture-id492025669?k=20&m=492025669&s=612x612&w=0&h=1IvG8Fjr8IqjC4PD0hnicqPi7NUn1QHiEJudjcw-DoQ=" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis velit assumenda libero beatae. Harum molestias delectus, magni, fugit laborum illum minima nobis voluptates dolor sapiente et quo eligendi deleniti quas mollitia sunt quae cumque enim! Inventore, ducimus consequatur facere tenetur, fuga voluptatum, blanditiis sed non ex exercitationem aspernatur quod placeat accusantium consectetur praesentium. Adipisci minima deleniti quod nulla rem dicta ea, sit, at quibusdam culpa illum accusamus nostrum consequuntur sapiente praesentium reprehenderit, natus aspernatur? Eum itaque delectus eos magnam, doloribus quaerat iure minus modi maxime nesciunt tempore molestias fuga quidem velit aperiam expedita ipsam exercitationem. Similique molestiae, quibusdam architecto vero tenetur nostrum laboriosam maiores dolore suscipit dolorem sapiente impedit assumenda quidem, eaque doloribus rem in atque iure corrupti ullam error repudiandae eligendi possimus tempora? Nihil saepe eum nemo itaque ex libero deserunt similique, animi eius quaerat distinctio modi, suscipit cum cupiditate tempore. Sed veritatis voluptates porro nam deserunt! Molestias doloribus fugiat quaerat asperiores rerum earum eum nulla architecto? Consequatur reiciendis, iusto dolorem ipsam placeat nihil a, et rerum harum cum, autem quibusdam? Laudantium doloremque labore laboriosam, vel quibusdam debitis error. Minus praesentium, pariatur nihil quae nam in consectetur dolore neque rem magnam optio voluptates beatae nobis illum debitis earum maiores sunt. Ab velit quis beatae doloremque qui molestias fuga. Doloribus quia deleniti, optio autem magni iste voluptas molestiae sint sit voluptatibus molestias ullam nesciunt odit ipsa qui praesentium sapiente illum nemo, nisi omnis ipsam corrupti corporis nam assumenda! Officia, accusamus numquam ea nulla eius a quaerat molestiae ducimus molestias quidem ipsa iste et, perspiciatis, illo suscipit quam dolore ipsum aperiam enim. Quod quibusdam veritatis sed, magnam, exercitationem dolorem reiciendis facere itaque quidem debitis ut accusamus est. Est voluptas, quisquam velit aliquam a expedita quis unde ea quod culpa ipsam adipisci incidunt, qui enim corrupti aliquid blanditiis totam aperiam delectus, maiores mollitia cumque. Dignissimos voluptatibus eos magnam nulla iste veritatis voluptate, ut tenetur fugit minus! Repellendus porro tempora voluptates quos recusandae ipsum saepe eaque quaerat adipisci vitae, aliquid atque totam harum sint, odit, molestias expedita velit enim voluptatem assumenda obcaecati. Maxime tempore, modi unde asperiores, et quidem hic ullam id earum neque tenetur temporibus dicta similique, non ad dolorem esse a sint? Facere voluptates iste labore quasi reiciendis illum eum sunt, magnam minima asperiores. Tenetur alias fugit sit repellendus sequi? Labore perferendis, corporis rerum quos voluptatum laudantium incidunt et non! Fugit vero sint temporibus error vitae dolores repudiandae magnam esse, corrupti, labore natus! Esse consequatur culpa veniam eum, libero quae accusamus similique, sapiente animi inventore tempore, ducimus laudantium eaque commodi saepe fugiat nemo dolor obcaecati in! Totam mollitia hic cumque modi inventore tempora consectetur error, veritatis maxime possimus ipsum sint officia earum sunt facilis voluptates atque corrupti dicta voluptas corporis quis! Enim eaque dignissimos distinctio, recusandae magnam saepe ab. Excepturi, cum commodi porro facilis aliquam voluptate suscipit sequi, eius ipsum repudiandae doloribus recusandae numquam odio voluptatum nostrum vero, quam sint. Praesentium, at accusantium similique adipisci exercitationem dolores hic quibusdam ducimus. Quaerat, obcaecati? Ad, esse? Natus voluptas totam unde iusto nulla.
+    </p>
+
+    <!-- js -->
+    <script>
+ 
+    function changeBG(color){
+
+        document.body.style.backgroundColor = color;
+        let txt=document.getElementsByClassName("text");   //value will be stored in array form
+        if(color == '#000000'){              //check if color is black
+            for(let elm of txt){             //value of text will be stored into elm 
+                elm.style.color="white";     //if bg is black then h1 and p color will be white
+            }
+         }else{
+            for(let elm of txt){
+                elm.style.color="black";      //else h1 and p color will be remain black
+            }
+        }
+    }
+    </script>
+    
+</body>
+</html>
